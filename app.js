@@ -26,7 +26,7 @@ const html = `
     <label for="subject">Subject:</label><br>
     <input type="text" id="subject" name="subject"><br>
     <label for="content">Content:</label><br>
-    <input type="text" id="content" name="content"><br>
+    <input type="text" id="content" name="content"><br><br>
     <button onclick="demo()">Send</button>
     <script>
         const configure={
