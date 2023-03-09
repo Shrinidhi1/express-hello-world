@@ -16,7 +16,8 @@ const html = `
     <title>Cloud Deployment</title>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1319.0.min.js"></script>
 </head>
-<body>
+
+<body style="text-align:center;">
     <h1> Send Email </h1>
     <label for="from">From:</label><br>
     <input type="text" id="from" name="from"><br>
@@ -26,8 +27,6 @@ const html = `
     <input type="text" id="subject" name="subject"><br>
     <label for="content">Content:</label><br>
     <input type="text" id="content" name="content"><br>
-    <p> Subject: Amazon SaaS Email </p>
-    <p> Content: Email sent </p>
     <button onclick="demo()">Send</button>
     <script>
         const configure={
