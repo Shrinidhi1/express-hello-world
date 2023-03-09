@@ -18,8 +18,14 @@ const html = `
 </head>
 <body>
     <h1> Send Email </h1>
-    <h3> From: mpriya1043@gmail.com </h3>
-    <h3> To: nayanadg24@gmail.com </h3>
+    <label for="from">From:</label><br>
+    <input type="text" id="from" name="from"><br>
+    <label for="to">To:</label><br>
+    <input type="text" id="to" name="to"><br>
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject"><br>
+    <label for="content">Content:</label><br>
+    <input type="text" id="content" name="content"><br>
     <p> Subject: Amazon SaaS Email </p>
     <p> Content: Email sent </p>
     <button onclick="demo()">Send</button>
