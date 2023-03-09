@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3306;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
@@ -9,7 +9,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 const mysql = require("mysql");
 const db = mysql.createConnection({
     host:"database-1.c8qclamzprbi.us-east-1.rds.amazonaws.com",
-    port:"3001",
+    port:"3306",
     user:"admin",
     password:"password",
     database:"mydb",
