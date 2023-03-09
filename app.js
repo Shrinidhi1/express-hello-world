@@ -9,7 +9,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 const mysql = require("mysql");
 const db = mysql.createConnection({
     host:"database-1.c8qclamzprbi.us-east-1.rds.amazonaws.com",
-    port:"3306",
+    port:"3001",
     user:"admin",
     password:"password",
     database:"mydb",
