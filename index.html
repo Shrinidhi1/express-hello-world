@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Deployment</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1319.0.min.js"></script>
+</head>
+
+<body>
+    <h1> Chat Application</h1>
+    <div id="output"></div>
+    <form>
+        <label for="text-input">Message:</label>
+        <input type="text" id="text-input">
+        <button type="button" onclick="printText()">Send</button> <br><br>
+    </form>
+    <button onclick="demo()">Report via E-Mail</button>
+
+    <script>
+        function printText() {
+            const inputText = document.getElementById("text-input").value;
+            const outputDiv = document.getElementById("output");
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = inputText;
+            outputDiv.appendChild(newParagraph);
+            document.getElementById("text-input").value = "";
+        }
+
+        const configure = {
+            accessKeyId: "AKIAWIR7K4P4TFCLTQEI",
+            secretAccessKey: "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",
+            apiVersion: '2010-12-01',
+            region: 'us-east-1'
+        }
+        const ses = new AWS.SES(configure);
+
+        function demo() {
+            const params =
+            {
+                Destination: {
+                    ToAddresses: [
+                        "nayanadg24@gmail.com",
+                    ]
+                },
+                Message: {
+                    Body: {
+                        Html: {
+                            Charset: "UTF-8",
+                            Data: "Malicious Behaviour Noticed"
+                        }
+                    },
+                    Subject: {
+                        Charset: 'UTF-8',
+                        Data: "User Report"
+                    }
+                },
+
+                Source: 'mpriya1043@gmail.com'
+            };
+            ses.sendEmail(params, (err, data) => {
+                if (err) {
+                    console.log(err);
+                }
+                else
+                    console.log("Success")
+            })
+        }
+    </script>
+</body>
