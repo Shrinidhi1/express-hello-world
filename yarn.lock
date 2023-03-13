@@ -382,6 +382,23 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+    
+socket.io: 
+  version: "1.1.0",
+  resolved: "https://registry.npmjs.org/socket.io/-/socket.io-1.1.0.tgz"
+  integrity: "sha512-IKHTm8upxn0+jPR/wwutj8sLPHBEVQ+bwCvi2nZTvznU0EdU6YKKiNep5yVX38URAFWELHETHehtH3H4FSmtdA=="
+  requires:
+    debug: "0.7.4"
+    engine.io: "1.4.0"
+    has-binary-data: "0.1.3"
+    socket.io-adapter: "0.2.0"
+    socket.io-client: "1.1.0"
+    socket.io-parser: "2.2.1"
+  dependencies:
+    debug: 
+      version: "0.7.4"
+      resolved: "https://registry.npmjs.org/debug/-/debug-0.7.4.tgz"
+      integrity: "sha512-EohAb3+DSHSGx8carOSKJe8G0ayV5/i609OD0J2orCkuyae7SyZSz2aoLmQF2s0Pj5gITDebwPH7GFBlqOUQ1Q=="
 
 statuses@2.0.1:
   version "2.0.1"
